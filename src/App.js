@@ -1,11 +1,12 @@
 import React from "react";
+import {connect} from 'react-redux';
+import {fetchAlcohols} from './actions/fetchAlcohols'
+
 
 class App extends React.Component{
-  // componentDidMount(){
-  //   fetch("http://localhost:3000/api/v1/alcohols/1")
-  //   .then(resp => resp.json())
-  //   .then(data => console.log(data))
-  // }
+  componentDidMount(){
+   this.props.fetchAlcohols({type: "FETCH_ALCOHOLS", payload: {name: "Vodka"}})
+  }
   
   render(){
     return(
@@ -15,6 +16,12 @@ class App extends React.Component{
     );
   }
 }
+
+// const mapStateToProps = (state) =>{
+//   return {
+//     alcohols: state.alcohols
+//   }
+// }
  
 
-export default App;
+export default connect(null, {fetchAlcohols})(App);
