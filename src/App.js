@@ -1,25 +1,20 @@
+import React from "react";
 
-
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        
-        <p>
-          Cocktail Book 
-        </p>
-        <a
-          className="App-link"
-          href="https://arispaulband.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Aris Paul Band
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+  componentDidMount(){
+    fetch("http://localhost:3000/api/v1/alcohols")
+    .then(resp => resp.json())
+    .then(data => console.log(data[0].name))
+  }
+  
+  render(){
+    return(
+      <div className="Cocktail Book">
+        Cocktail Book
+      </div>
+    );
+  }
 }
+ 
 
 export default App;
