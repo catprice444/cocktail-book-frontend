@@ -1,13 +1,29 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {fetchAlcohols} from '../actions/fetchAlcohols'
+import AlcoholInput from '../components/AlcoholInput'
+import Alcohols from '../components/Alcohols'
 
 class AlcoholsContainer extends React.Component{
+    
+    componentDidMount(){
+        this.props.fetchAlcohols()
+    }
+    
     render(){
         return(
             <div>
-                AlcoholsContainer
+                <AlcoholInput/>
+                <Alcohols/>
             </div>
         )
     }
 }
 
-export default AlcoholsContainer
+const mapStateToProps = state => {
+    return {
+        alcohols: state.alcohols
+    }
+}
+
+export default connect(mapStateToProps, {fetchAlcohols})(AlcoholsContainer)
