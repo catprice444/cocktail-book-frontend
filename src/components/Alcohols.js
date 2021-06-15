@@ -3,7 +3,7 @@ import React from 'react'
 const Alcohols = (props) => {
     return (
         <div>
-            Alcohols
+            {props.alcohols.map(alcohol => <li key={alcohol.id}> {alcohol.name} - {alcohol.website} </li>)}
         </div>
     )
 }
