@@ -14,7 +14,7 @@ class AlcoholsContainer extends React.Component{
         return(
             <div>
                 <AlcoholInput/>
-                <Alcohols/>
+                <Alcohols alcohols={this.props.alcohols}/>
             </div>
         )
     }
