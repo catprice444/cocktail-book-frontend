@@ -6,7 +6,6 @@ import AlcoholsContainer from './containers/AlcoholsContainer'
 
 class App extends React.Component{
   componentDidMount(){
-  //  this.props.fetchAlcohols({type: "FETCH_ALCOHOLS", payload: {name: "Vodka"}})
   }
   
   render(){
@@ -25,4 +24,4 @@ class App extends React.Component{
 // }
  
 
-export default connect(null, {fetchAlcohols})(App);
+export default connect()(App);
