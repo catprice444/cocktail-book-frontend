@@ -1,17 +1,18 @@
 import React from "react";
 import {connect} from 'react-redux';
-import {fetchAlcohols} from './actions/fetchAlcohols'
+// import {fetchAlcohols} from './actions/fetchAlcohols'
+import AlcoholsContainer from './containers/AlcoholsContainer'
 
 
 class App extends React.Component{
   componentDidMount(){
-   this.props.fetchAlcohols({type: "FETCH_ALCOHOLS", payload: {name: "Vodka"}})
+  //  this.props.fetchAlcohols({type: "FETCH_ALCOHOLS", payload: {name: "Vodka"}})
   }
   
   render(){
     return(
       <div className="Cocktail Book">
-        Cocktail Book
+        <AlcoholsContainer/>
       </div>
     );
   }
