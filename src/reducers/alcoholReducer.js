@@ -1,4 +1,10 @@
 export default function alcoholReducer(state = {alcohols: []}, action){
-    return state
-    // return action.payload
+    switch (action.type) {
+        case 'FETCH_ALCOHOLS':
+            return {alcohols: action.payload}
+
+        default: 
+            return state
+    }
+    
 }
