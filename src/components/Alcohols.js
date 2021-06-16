@@ -1,9 +1,12 @@
 import React from 'react' 
+import Alcohol from './Alcohol'
 
 const Alcohols = (props) => {
     return (
         <div>
-            {props.alcohols.map(alcohol => <li key={alcohol.id}> {alcohol.name} </li>)}
+            {props.alcohols.map(alcohol => 
+            <div key={alcohol.id}><Alcohol alcohol={alcohol}/></div>
+            )}
         </div>
     )
 }

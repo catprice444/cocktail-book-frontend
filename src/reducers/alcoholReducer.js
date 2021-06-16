@@ -1,4 +1,5 @@
 export default function alcoholReducer(state = {alcohols: []}, action){
+    // debugger;
     switch (action.type) {
         case 'FETCH_ALCOHOLS':
             return {alcohols: action.payload}
