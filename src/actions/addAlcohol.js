@@ -12,5 +12,4 @@ export function addAlcohol(data) {
         .then(response => response.json())
         .then(alcohol => dispatch({type: 'ADD_ALCOHOL', payload: alcohol}))
       }
-    
 }

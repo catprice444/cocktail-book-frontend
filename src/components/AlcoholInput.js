@@ -3,7 +3,11 @@ import {connect} from 'react-redux'
 import {addAlcohol} from '../actions/addAlcohol'
 
 class AlcoholInput extends React.Component{
-    state = {name: '', website: '', preference: ''}
+    state = {
+        name: "",
+        website: "",
+        preference: ""
+      }
 
     handleChange = (event) => {
         this.setState({
@@ -14,23 +18,29 @@ class AlcoholInput extends React.Component{
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.addAlcohol(this.state)
+        this.setState({
+            name: "",
+            website: "",
+            preference: ""
+        })
     } 
     
-    render(){
-        return(
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                   <label>Alcohol Name:</label><input type='text' value={this.state.name} name='name' onChange={this.handleChange}></input><br></br>
-                
-                   <label>Alcohol Website:</label><input type='text' value={this.state.website} name='website' onChange={this.handleChange}></input><br></br>
-
-                   <label>Alcohol Preference:</label><input type='number' min='1' value={this.state.preference} name='preference' onChange={this.handleChange}></input><br></br> 
-                
-                <input type='submit'></input>
-                </form>
-            </div>
+    render() {
+        return (
+          <div>
+            <form onSubmit={this.handleSubmit}>
+              <label>Name: </label>
+              <input type='text' value={this.state.name} name="name" onChange={this.handleChange}/><br/>
+              <label>Website: </label>
+              <input type='text' value={this.state.website} name="website" onChange={this.handleChange}/><br/>
+              <label>Preference: </label>
+              <input type='text' value={this.state.preference} name="preference" onChange={this.handleChange}/><br/>
+              <input type="submit"/>
+            </form>
+          </div>
         )
-    }
+      }
+
 }
 
 export default connect(null, {addAlcohol})(AlcoholInput)
