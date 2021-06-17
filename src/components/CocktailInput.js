@@ -4,7 +4,7 @@ class CocktailInput extends React.Component {
     render(){
         return(
             <div>
-                
+              CocktailInput  
             </div>
         )
     }
