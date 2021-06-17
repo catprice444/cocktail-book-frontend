@@ -1,11 +1,14 @@
 import React from 'react' 
+import {Link} from 'react-router-dom'
 import Alcohol from './Alcohol'
 
 const Alcohols = (props) => {
     return (
         <div>
             {props.alcohols.map(alcohol => 
-            <div key={alcohol.id}><Alcohol alcohol={alcohol}/></div>
+            <li key={alcohol.id}>
+                <Link to={`/alcohols/${alcohol.id}`}>{alcohol.name}</Link>
+            </li>
             )}
         </div>
     )
