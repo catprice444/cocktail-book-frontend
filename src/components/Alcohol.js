@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 const Alcohol = (props) => {
+    let alcohol = props.alcohols.filter(alcohol => alcohol.id == props.match.params.id)[0]
+    console.log(alcohol)
     return(
         <li>
-            {props.alcohol.name} - {props.alcohol.website}
+            {alcohol ? alcohol.name : null} - {alcohol ? alcohol.website : null}
         </li>
     )
 }
