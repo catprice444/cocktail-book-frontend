@@ -11,7 +11,7 @@ const Alcohol = (props) => {
             {/* {alcohol ? <a href='${alcohol.website}'/> : null} */}
             {/* Fix the link */}
         </h2>
-        <CocktailsContainer/>
+        <CocktailsContainer alcohol={alcohol}/>
         </div>
     )
 }
