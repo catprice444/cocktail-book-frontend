@@ -1,8 +1,10 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {Route} from 'react-router-dom'
 import {fetchAlcohols} from '../actions/fetchAlcohols'
 import AlcoholInput from '../components/AlcoholInput'
 import Alcohols from '../components/Alcohols'
+
 
 class AlcoholsContainer extends React.Component{
     
@@ -13,8 +15,9 @@ class AlcoholsContainer extends React.Component{
     render(){
         return(
             <div>
-                <AlcoholInput/><br></br>
-                <Alcohols alcohols={this.props.alcohols}/>
+                <Route path='/alcohols/new' component={AlcoholInput}/>
+                <Route path='/alcohols' render={() => <Alcohols alcohols={this.props.alcohols}/> }/>
+                
             </div>
         )
     }
