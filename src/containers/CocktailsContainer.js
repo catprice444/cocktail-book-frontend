@@ -6,7 +6,7 @@ class CocktailsContainer extends React.Component {
     render(){
         return(
             <div>
-                <CocktailInput/>
+                <CocktailInput alcohol={this.props.alcohol}/>
                 <Cocktails cocktails={this.props.alcohol && this.props.alcohol.cocktails}/>
             </div>
         )
