@@ -4,8 +4,8 @@ import {addAlcohol} from '../actions/addAlcohol'
 
 class AlcoholInput extends React.Component{
     state = {
-        name: "",
-        website: "",
+        name: '',
+        website: '',
       }
 
     handleChange = (event) => {
@@ -18,8 +18,8 @@ class AlcoholInput extends React.Component{
         event.preventDefault()
         this.props.addAlcohol(this.state)
         this.setState({
-            name: "",
-            website: "",
+            name: '',
+            website: '',
         })
     } 
     

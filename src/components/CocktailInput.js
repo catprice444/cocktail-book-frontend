@@ -1,22 +1,47 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {addCocktail} from '../actions/addCocktail'
 
 class CocktailInput extends React.Component {
+    state = {
+        name: '',
+        ingredients: '',
+        recipe: '',
+        rating: ''
+    }
+
+    handleChange = (event) =>{
+        this.setState({
+            [event.target.name]: event.target.value
+        }) 
+    }
+
+    handleSubmit = (event) =>{
+        event.preventDefault;
+        this.props.addCocktail(this.state)
+        this.setState({
+            name: '',
+            ingredients: '',
+            recipe: '',
+            rating: ''
+        })
+    }
+    
     render(){
         return(
             <div>
-              <form>
+              <form onSubmit={this.handleSubmit}>
                   <label>Cocktail: </label>
-                  <input type='text'></input><br></br>
+                  <input type='text' name='name' value={this.state.name} onChange={this.handleChange}></input><br></br>
 
                   <label>Ingredients: </label>
-                  <input type='text'></input><br></br>
+                  <input type='text' name='ingredients' value={this.state.ingredients} onChange={this.handleChange}></input><br></br>
 
                   <label>Recipe: </label>
-                  <input type='text'></input><br></br>
+                  <input type='text' name='recipe' value={this.state.recipe} onChange={this.handleChange}></input><br></br>
 
                   <label>Rating: </label>
-                    <select>
+                    <select name='rating' value={this.state.rating} onChange={this.handleChange}>
                         <option> 1 </option>
                         <option> 2 </option>
                         <option> 3 </option>
@@ -31,4 +56,4 @@ class CocktailInput extends React.Component {
 
 }
 
-export default connect(null, )(CocktailInput)
+export default connect(null, {addCocktail} )(CocktailInput)
