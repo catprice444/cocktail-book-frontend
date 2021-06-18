@@ -17,7 +17,7 @@ class CocktailInput extends React.Component {
     }
 
     handleSubmit = (event) =>{
-        event.preventDefault;
+        event.preventDefault();
         this.props.addCocktail(this.state)
         this.setState({
             name: '',
@@ -47,8 +47,9 @@ class CocktailInput extends React.Component {
                         <option> 3 </option>
                         <option> 4 </option>
                         <option> 5 </option>
-                    </select>
+                    </select> <br></br>
 
+                <input type="submit"/>
               </form>
             </div>
         )
