@@ -1,6 +1,12 @@
 import React from 'react';
+import {deleteCocktail} from '../actions/deleteCocktail';
+import {connect} from 'react-redux';
 
 const Cocktails = (props) => {
+    const handleDelete = () =>{
+
+    }
+    
     return (
         <div>
 
@@ -12,7 +18,9 @@ const Cocktails = (props) => {
             <p><i>Ingredients:</i> {cocktail.ingredients}</p>
 
             <p><i>Recipe:</i> {cocktail.recipe}</p>
-            </div>)}<br></br>
+
+            <button onClick={handleDelete}>Delete</button>
+            </div>)}
 
         </div>
     
@@ -21,4 +29,4 @@ const Cocktails = (props) => {
 
 }
 
-export default Cocktails 
+export default connect(null, {deleteCocktail})(Cocktails)

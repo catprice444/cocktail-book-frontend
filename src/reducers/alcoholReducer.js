@@ -16,6 +16,15 @@ export default function alcoholReducer(state = {alcohols: []}, action){
                 }
             })}
 
+            case 'DELETE_COCKTAIL':
+                return{...state, alcohols: state.alcohols.map(alcohol => {
+                    if (alcohol.id === action.payload.id){
+                        return action.payload
+                    } else {
+                        return alcohol
+                    }
+                })}
+
         default: 
             return state
     }
