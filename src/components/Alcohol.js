@@ -8,7 +8,7 @@ const Alcohol = (props) => {
         <div>
         <h1>
             {alcohol ? alcohol.name : null} 
-            {/* {alcohol ? <a href='${alcohol.website}'/> : null} */}
+            {/* {alcohol ? <a href=`${alcohol.website}`/> : null} */}
             {/* Fix the link */}
         </h1>
         <CocktailsContainer alcohol={alcohol}/>

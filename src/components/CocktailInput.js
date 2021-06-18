@@ -18,7 +18,7 @@ class CocktailInput extends React.Component {
 
     handleSubmit = (event) =>{
         event.preventDefault();
-        this.props.addCocktail(this.state)
+        this.props.addCocktail(this.state, this.props.alcohol.id)
         this.setState({
             name: '',
             ingredients: '',
