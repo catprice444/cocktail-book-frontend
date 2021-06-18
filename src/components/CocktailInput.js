@@ -7,7 +7,7 @@ class CocktailInput extends React.Component {
         name: '',
         ingredients: '',
         recipe: '',
-        rating: ''
+        rating: '1'
     }
 
     handleChange = (event) =>{
@@ -23,7 +23,7 @@ class CocktailInput extends React.Component {
             name: '',
             ingredients: '',
             recipe: '',
-            rating: ''
+            rating: '1'
         })
     }
     
