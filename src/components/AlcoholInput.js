@@ -6,7 +6,6 @@ class AlcoholInput extends React.Component{
     state = {
         name: "",
         website: "",
-        preference: ""
       }
 
     handleChange = (event) => {
@@ -21,7 +20,6 @@ class AlcoholInput extends React.Component{
         this.setState({
             name: "",
             website: "",
-            preference: ""
         })
     } 
     
@@ -33,8 +31,6 @@ class AlcoholInput extends React.Component{
               <input type='text' value={this.state.name} name="name" onChange={this.handleChange}/><br/>
               <label>Website: </label>
               <input type='text' value={this.state.website} name="website" onChange={this.handleChange}/><br/>
-              <label>Preference: </label>
-              <input type='text' value={this.state.preference} name="preference" onChange={this.handleChange}/><br/>
               <input type="submit"/>
             </form>
           </div>
