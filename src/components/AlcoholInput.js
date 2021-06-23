@@ -26,6 +26,7 @@ class AlcoholInput extends React.Component{
     render() {
         return (
           <div>
+              <h3>Add a new alcohol</h3>
             <form onSubmit={this.handleSubmit}>
               <label>Name: </label>
               <input type='text' value={this.state.name} name="name" onChange={this.handleChange}/><br/>

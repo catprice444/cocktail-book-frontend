@@ -11,12 +11,13 @@ class CocktailsContainer extends React.Component {
         return(
             <div>
                 <Switch>
-                    {/* <CocktailInput alcohol={this.props.alcohol}/> */}
-                    {/* <Route path='alcohols/:id/cocktails/:id' render={(routerProps) => <Cocktail {...routerProps} cocktails={this.props.alcohols.cocktails}/>}/> */}
-                    {/* <Route path='alcohols/:id/cocktails' render={(routerProps) => <Cocktails {...routerProps} cocktails={this.props.alcohols.cocktails}/>}/> */}
-                    {/* <Cocktails cocktails={this.props.alcohol && this.props.alcohol.cocktails}/> */}
-                    <Route path="/alcohols/:id/cocktails/:id" component={Cocktail} />
+                    <Route path='/alcohols/:id/cocktails/new' component={CocktailInput}/>
+                    <Route path="/alcohols/:id/cocktails/:id" render={(routerProps) => <Cocktail {...routerProps} cocktails={this.props.alcohols}/>}/>
+                    <Route path="/alcohols/:id/cocktails" render={(routerProps) => <Cocktails {...routerProps} cocktails={this.props.alcohol && this.props.alcohol.cocktails}/>}/>
                 </Switch>
+                
+                <CocktailInput alcohol={this.props.alcohol}/>
+                <Cocktails cocktails={this.props.alcohol && this.props.alcohol.cocktails}/>
             </div>
         )
     }
