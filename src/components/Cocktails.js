@@ -1,15 +1,21 @@
 import React from 'react';
-import {deleteCocktail} from '../actions/deleteCocktail';
+// import {deleteCocktail} from '../actions/deleteCocktail';
 import {connect} from 'react-redux';
+import {editCocktail} from '../actions/editCocktail';
 
 const Cocktails = (props) => {
-    const handleDelete = () =>{
 
+    // const handleDelete = (cocktail) =>{
+    //     props.deleteCocktail(cocktail.id, cocktail.alcohol_id)
+    // }
+
+    const handleEdit = (cocktail) =>{
+        props.editCocktail(cocktail.id, cocktail.alcohol_id)
     }
     
     return (
         <div>
-
+            
             {props.cocktails && props.cocktails.map(cocktail => 
             <div key={cocktail.id}> 
             <h3><u> Cocktail: {cocktail.name}</u> </h3> 
@@ -19,7 +25,10 @@ const Cocktails = (props) => {
 
             <p><i>Recipe:</i> {cocktail.recipe}</p>
 
-            <button onClick={handleDelete}>Delete</button>
+            {/* <button onClick={() => handleDelete(cocktail)}>Delete</button> */}
+            {/* </div>)} */}
+
+            <button onClick={() => handleEdit(cocktail)}>Edit</button>
             </div>)}
 
         </div>
@@ -29,4 +38,5 @@ const Cocktails = (props) => {
 
 }
 
-export default connect(null, {deleteCocktail})(Cocktails)
+// export default connect(null, {deleteCocktail})(Cocktails)
+export default connect(null, {editCocktail})(Cocktails)

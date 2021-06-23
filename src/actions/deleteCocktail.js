@@ -1,6 +1,6 @@
-export const deleteCocktail = (alcoholId, cocktailId) => {
-    return(dispatch) =>{
-        fetch(`http://localhost:3000/api/v1/alcohols/${alcoholId}/cocktail/${cocktailId}`, {
+export const deleteCocktail = (cocktailId, alcoholId) => {
+    return (dispatch) =>{
+        fetch(`http://localhost:3000/api/v1/alcohols/${alcoholId}/cocktails/${cocktailId}`, {
             method: 'DELETE'
         })
         .then(response => response.json())
