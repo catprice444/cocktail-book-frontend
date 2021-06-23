@@ -30,6 +30,7 @@ class CocktailInput extends React.Component {
     render(){
         return(
             <div>
+                <h3>Add a new {this.props.alcohol.name} cocktail</h3>
               <form onSubmit={this.handleSubmit}>
                   <label>Cocktail: </label>
                   <input type='text' name='name' value={this.state.name} onChange={this.handleChange}></input><br></br>
