@@ -1,9 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Route, Switch} from 'react-router-dom';
-import {fetchCocktails} from '../actions/fetchAlcohols';
+import {fetchCocktails} from '../actions/fetchCocktails';
 import AllCocktails from '../components/AllCocktails';
-import Navbar from '../components/Navbar';
 
 
 class AllCocktailsContainer extends React.Component{
@@ -15,7 +14,7 @@ class AllCocktailsContainer extends React.Component{
     render(){
         return(
             <div>
-            <Navbar/>
+            
              <Switch>
                 <Route path='/cocktails' component={AllCocktails}/>
                 {/* <Route path='/alcohols/:id' render={(routerProps) => <Alcohol {...routerProps} alcohols={this.props.alcohols}/>}/> */}

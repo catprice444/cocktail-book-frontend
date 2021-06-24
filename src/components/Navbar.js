@@ -8,6 +8,7 @@ const Navbar = () => {
             <Link to='/cocktails' style={{paddingRight: '10px'}}> Cocktails</Link>
             <Link to='/alcohols' style={{paddingRight: '10px'}}>Alcohols  </Link>
             <Link to='/alcohols/new' style={{paddingRight: '10px'}}> Add Alcohol</Link>
+            <Link to='/' style={{paddingRight: '10px'}}> Home </Link>
         </div>
     )
 
