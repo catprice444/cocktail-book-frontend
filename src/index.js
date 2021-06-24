@@ -7,6 +7,7 @@ import App from './App';
 import alcoholReducer from './reducers/alcoholReducer';
 import cocktailReducer from './reducers/cocktailReducer';
 import {BrowserRouter as Router} from 'react-router-dom';
+import './index.css';
 
 const reducers = combineReducers({
   alcohols: alcoholReducer,
