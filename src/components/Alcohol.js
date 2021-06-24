@@ -1,9 +1,6 @@
 import React from 'react';
 import CocktailsContainer from '../containers/CocktailsContainer';
 
-
-
-
 const Alcohol = (props) => {
     let alcohol = props.alcohols.filter(alcohol => alcohol.id == props.match.params.id)[0]
     

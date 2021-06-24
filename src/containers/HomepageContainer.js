@@ -2,7 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Route, Switch} from 'react-router-dom';
 import {fetchCocktails} from '../actions/fetchCocktails';
-import AllCocktails from '../components/AllCocktails';
+import Homepage from '../components/Homepage';
+
 
 
 class AllCocktailsContainer extends React.Component{
@@ -16,7 +17,8 @@ class AllCocktailsContainer extends React.Component{
             <div>
             
              <Switch>
-                <Route path='/cocktails' render={(routerProps) => <AllCocktails {...routerProps} cocktails={this.props.cocktails}/>}/> 
+            
+                <Route exact path='/' render={(routerProps) => <Homepage {...routerProps} cocktails={this.props.cocktails}/>}/>
             </Switch>
             </div>
         )

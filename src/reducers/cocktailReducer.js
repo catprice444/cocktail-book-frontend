@@ -5,6 +5,7 @@ export default function cocktailReducer(state = {cocktails: []}, action){
         case 'FETCH_COCKTAILS':
             return {cocktails: action.payload}
 
+
         default: 
             return state
     }

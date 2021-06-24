@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from 'react-redux';
 import AlcoholsContainer from './containers/AlcoholsContainer';
-import AllCocktailsContainer from './containers/AllCocktailsContainer';
+import HomepageContainer from './containers/HomepageContainer';
 import Navbar from './components/Navbar';
 
 
@@ -18,7 +18,7 @@ class App extends React.Component{
        
         <Navbar/>
         <AlcoholsContainer/>
-        <AllCocktailsContainer/>
+        <HomepageContainer/>
       </div>
     );
   }
