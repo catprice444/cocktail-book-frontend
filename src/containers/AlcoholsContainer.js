@@ -31,7 +31,7 @@ class AlcoholsContainer extends React.Component{
 
 const mapStateToProps = state => {
     return {
-        alcohols: state.alcohols
+        alcohols: state.alcohols.alcohols
     }
 }
 

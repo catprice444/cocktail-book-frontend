@@ -16,10 +16,7 @@ class AllCocktailsContainer extends React.Component{
             <div>
             
              <Switch>
-                <Route path='/cocktails' component={AllCocktails}/>
-                {/* <Route path='/alcohols/:id' render={(routerProps) => <Alcohol {...routerProps} alcohols={this.props.alcohols}/>}/> */}
-                {/* <Route path='/alcohols' render={(routerProps) => <Alcohols {...routerProps} alcohols={this.props.alcohols}/>}/> */}
-                {/* <Route path='/' render={(routerProps) => <Homepage {...routerProps} alcohols={this.props.alcohols}/>}/> */}
+                <Route path='/cocktails' render={(routerProps) => <AllCocktails {...routerProps} cocktails={this.props.cocktails}/>}/> 
             </Switch>
             </div>
         )
@@ -28,7 +25,7 @@ class AllCocktailsContainer extends React.Component{
 
 const mapStateToProps = state => {
     return {
-        cocktails: state.cocktails
+        cocktails: state.cocktails.cocktails
     }
 }
 
