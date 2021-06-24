@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from 'react-redux';
-// import {fetchAlcohols} from './actions/fetchAlcohols'
 import AlcoholsContainer from './containers/AlcoholsContainer'
+
 
 
 class App extends React.Component{
@@ -16,12 +16,5 @@ class App extends React.Component{
     );
   }
 }
-
-// const mapStateToProps = (state) =>{
-//   return {
-//     alcohols: state.alcohols
-//   }
-// }
- 
 
 export default connect()(App);

@@ -5,6 +5,8 @@ import {fetchAlcohols} from '../actions/fetchAlcohols';
 import AlcoholInput from '../components/AlcoholInput';
 import Alcohols from '../components/Alcohols';
 import Alcohol from '../components/Alcohol';
+import Navbar from '../components/Navbar';
+import Homepage from '../components/Homepage';
 
 
 class AlcoholsContainer extends React.Component{
@@ -16,10 +18,12 @@ class AlcoholsContainer extends React.Component{
     render(){
         return(
             <div>
+            <Navbar/>
              <Switch>
                 <Route path='/alcohols/new' component={AlcoholInput}/>
                 <Route path='/alcohols/:id' render={(routerProps) => <Alcohol {...routerProps} alcohols={this.props.alcohols}/>}/>
                 <Route path='/alcohols' render={(routerProps) => <Alcohols {...routerProps} alcohols={this.props.alcohols}/>}/>
+                <Route path='/' render={(routerProps) => <Homepage {...routerProps} alcohols={this.props.alcohols}/>}/>
             </Switch>
             </div>
         )

@@ -6,8 +6,8 @@ const Alcohols = (props) => {
         <div>
             {props.alcohols.map(alcohol => 
             <h3 key={alcohol.id}>
-                <Link to={`/alcohols/${alcohol.id}`}>{alcohol.name}</Link>--
-                {alcohol ? <a href={`${alcohol.website}`} target='_blank'>Website about {alcohol.name}</a> : null}
+                <Link to={`/alcohols/${alcohol.id}`}>{alcohol.name}</Link>
+                <p>{alcohol ? <a href={`${alcohol.website}`} target='_blank'>Learn more about {alcohol.name}</a> : null} </p>
                 <br></br>
             </h3>
             )}
