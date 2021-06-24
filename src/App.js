@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import AlcoholsContainer from './containers/AlcoholsContainer';
 import HomepageContainer from './containers/HomepageContainer';
 import Navbar from './components/Navbar';
-
+import './App.css';
 
 
 

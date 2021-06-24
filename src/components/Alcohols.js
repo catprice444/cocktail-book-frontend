@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const Alcohols = (props) => {
     return (
-        <div>
+        <div className='center'>
             {props.alcohols.map(alcohol => 
             <h3 key={alcohol.id}>
                 <Link to={`/alcohols/${alcohol.id}`}>{alcohol.name}</Link>

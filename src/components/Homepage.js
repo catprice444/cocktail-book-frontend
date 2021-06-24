@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom'
 
 const Homepage = (props) => {
     return(
-        <div>
+        <div className='center'>
             <h1>Welcome To Your Cocktail Book! </h1>
-            
+
             <h3>List of current cocktails</h3>
 
            {props.cocktails.map(cocktail => 

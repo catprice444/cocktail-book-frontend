@@ -25,7 +25,7 @@ class AlcoholInput extends React.Component{
     
     render() {
         return (
-          <div>
+          <div className='center'>
               <h3>Add a new alcohol</h3>
             <form onSubmit={this.handleSubmit}>
               <label>Name: </label>
