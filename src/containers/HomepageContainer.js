@@ -6,7 +6,7 @@ import Homepage from '../components/Homepage';
 
 
 
-class AllCocktailsContainer extends React.Component{
+class HomepageContainer extends React.Component{
     
     componentDidMount(){
         this.props.fetchCocktails()
@@ -31,4 +31,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {fetchCocktails})(AllCocktailsContainer)
+export default connect(mapStateToProps, {fetchCocktails})(HomepageContainer)
